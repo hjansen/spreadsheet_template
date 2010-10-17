@@ -1,4 +1,6 @@
-module SpreadsheetOnRails
+require 'spreadsheet_template/railtie.rb'
+
+module SpreadsheetTemplate
 
   class Handler < ::ActionView::TemplateHandler
     include ActionView::TemplateHandlers::Compilable
@@ -6,7 +8,7 @@ module SpreadsheetOnRails
     def compile(template)
       %Q{controller.response.content_type ||= Mime::XLS
          controller.headers["Content-Disposition"] = "attachment"
-         SpreadsheetOnRails::Base.new { |workbook| #{template.source} }.process}
+         SpreadsheetTemplate::Base.new { |workbook| #{template.source} }.process}
     end
 
   end

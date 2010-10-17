@@ -1,9 +1,9 @@
-SpreadsheetOnRails
+SpreadsheetTemplate
 ==================
 
 A Rails plugin to generate xls documents by using rxls templates.
 
-Based on Defv's railsxls plugin (http://github.com/DefV/railsxls) without the Java part.
+Based on Spreadsheet on Rails (by Koen Van der Auwera) plugin (http://github.com/10to1/spreadsheet_on_rails) but supports Rails 3.
 
 Dependencies
 ============
