@@ -17,7 +17,6 @@ Gem::Specification.new do |s|
   s.add_dependency('rails', '>= 3.0')
   s.add_dependency('ruby-ole', '>= 1.2.10.1')
   s.add_dependency('spreadsheet', '>= 0.6.4.1')
-  s.add_dependency('iconv', '>= 0.1')
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
