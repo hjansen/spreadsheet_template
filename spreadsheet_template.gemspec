@@ -18,6 +18,10 @@ Gem::Specification.new do |s|
   s.add_dependency('ruby-ole', '>= 1.2.10.1')
   s.add_dependency('spreadsheet', '>= 0.6.4.1')
 
+  if RUBY_VERSION < "1.9"
+    s.add_dependency('iconv', '>= 0.1')
+  end
+
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
